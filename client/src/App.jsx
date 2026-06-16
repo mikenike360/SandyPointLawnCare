@@ -239,10 +239,6 @@ export default function App() {
                 <a href="mailto:eli@sandypointlawncare.com">eli@sandypointlawncare.com</a>
               </div>
               <div className="contact-item">
-                <h3>Address</h3>
-                <p>4550 Decatur Drive<br />Ferndale, WA 98248</p>
-              </div>
-              <div className="contact-item">
                 <h3>Website</h3>
                 <p>sandypointlawncare.com</p>
               </div>
