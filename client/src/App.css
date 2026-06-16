@@ -639,6 +639,78 @@ body {
   color: #444;
 }
 
+/* Pricing Section */
+.pricing {
+  padding: 80px 0;
+  background-color: var(--light-sky);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background-color: var(--sky-white);
+  border: 3px solid var(--lawn-green);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 5px 5px 0 var(--grass-dark);
+  animation: fadeInUp 0.6s ease;
+  transition: transform var(--transition);
+}
+
+.pricing-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 var(--grass-dark);
+}
+
+.pricing-card--featured {
+  border-color: var(--mower-red);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.pricing-card--featured:hover {
+  box-shadow: 7px 7px 0 var(--ink);
+}
+
+.pricing-card--addon {
+  border-style: dashed;
+}
+
+.pricing-label {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--lawn-green);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pricing-amount {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.pricing-card--featured .pricing-amount {
+  color: var(--mower-red);
+}
+
+.pricing-note {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
 /* Contact Section */
 .contact {
   background-color: var(--lawn-green);
@@ -662,9 +734,10 @@ body {
   padding: 40px;
   border-radius: 16px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
-  margin-bottom: 20px;
+  max-width: 720px;
+  margin: 0 auto 20px;
   box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
   animation: fadeInUp 0.6s ease;
 }
@@ -786,6 +859,26 @@ body {
   opacity: 0.7;
 }
 
+.footer-credit {
+  margin-top: 10px;
+}
+
+.footer-heart {
+  color: var(--mower-red);
+  opacity: 1;
+}
+
+.footer-credit a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.footer-credit a:hover {
+  color: var(--mint-cloud);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hamburger {
@@ -844,8 +937,14 @@ body {
     gap: 20px;
   }
 
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
   .contact-card {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    max-width: 320px;
     gap: 16px;
     padding: 30px 20px;
   }
@@ -862,6 +961,7 @@ body {
 
   .services,
   .about,
+  .pricing,
   .contact {
     padding: 60px 0;
   }
@@ -953,6 +1053,7 @@ body {
 
   .contact-card {
     grid-template-columns: 1fr;
+    max-width: 280px;
     padding: 24px 16px;
   }
 
@@ -963,13 +1064,19 @@ body {
 
   .services,
   .about,
+  .pricing,
   .contact {
     padding: 40px 0;
   }
 
   .service-card,
-  .benefit-item {
+  .benefit-item,
+  .pricing-card {
     padding: 24px 16px;
+  }
+
+  .pricing-amount {
+    font-size: 36px;
   }
 
   .contact-item h3 {

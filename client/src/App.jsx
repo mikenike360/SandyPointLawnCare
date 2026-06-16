@@ -111,6 +111,11 @@ export default function App() {
               </button>
             </li>
             <li>
+              <button onClick={() => scrollToSection('pricing')} className="nav-link">
+                Pricing
+              </button>
+            </li>
+            <li>
               <button onClick={() => scrollToSection('contact')} className="nav-link">
                 Contact
               </button>
@@ -131,6 +136,9 @@ export default function App() {
             </button>
             <button onClick={() => scrollToSection('about')} className="mobile-nav-link">
               About
+            </button>
+            <button onClick={() => scrollToSection('pricing')} className="mobile-nav-link">
+              Pricing
             </button>
             <button onClick={() => scrollToSection('contact')} className="mobile-nav-link">
               Contact
@@ -225,6 +233,29 @@ export default function App() {
         </div>
       </section>
 
+      <section className="pricing" id="pricing">
+        <div className="container">
+          <h2 className="section-title">Pricing</h2>
+          <div className="pricing-grid">
+            <div className="pricing-card pricing-card--featured">
+              <p className="pricing-label">Standard Yard</p>
+              <p className="pricing-amount">$30</p>
+              <p className="pricing-note">Most yards in Sandy Point</p>
+            </div>
+            <div className="pricing-card">
+              <p className="pricing-label">Larger Yard</p>
+              <p className="pricing-amount">$30+</p>
+              <p className="pricing-note">Small upcharge for bigger lawns — I&apos;ll give you a fair quote!</p>
+            </div>
+            <div className="pricing-card pricing-card--addon">
+              <p className="pricing-label">Add-On</p>
+              <p className="pricing-amount">+$15</p>
+              <p className="pricing-note">Weed eating for spots the mower can&apos;t reach</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="contact" id="contact">
         <div className="container">
           <h2 className="section-title">Get In Touch</h2>
@@ -267,6 +298,9 @@ export default function App() {
                 <button onClick={() => scrollToSection('about')}>About</button>
               </li>
               <li>
+                <button onClick={() => scrollToSection('pricing')}>Pricing</button>
+              </li>
+              <li>
                 <button onClick={() => scrollToSection('contact')}>Contact</button>
               </li>
             </ul>
@@ -279,6 +313,12 @@ export default function App() {
         </div>
         <div className="footer-bottom">
           <p>&copy; 2026 Sandy Point Lawn Care. All rights reserved.</p>
+          <p className="footer-credit">
+            Made with <span className="footer-heart" aria-label="love">❤</span> by{' '}
+            <a href="https://www.venomlabs.xyz/" target="_blank" rel="noopener noreferrer">
+              VenomLabs
+            </a>
+          </p>
         </div>
       </footer>
     </div>
